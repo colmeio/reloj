@@ -31,11 +31,9 @@ jobs:
 
       - run: pnpm build
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-pages-artifact@v5
         with:
-          name: site
           path: dist
-          retention-days: 1
 
   deploy:
     needs: build
